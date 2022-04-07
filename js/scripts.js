@@ -270,3 +270,39 @@
                 goatcounter.bind_events()
         })
 })();
+
+function getEmail() {
+    var email = document.getElementById("email").value;
+    var email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (email_regex.test(email)) {
+        const data = {
+            // Effectively autoincrement the id
+            id: "=INDIRECT(ADDRESS(ROW()-1,COLUMN()))+1",
+            email: email,
+            Date: new Date()
+        };
+
+        // Add one line to the sheet
+        fetch("https://sheet.best/api/sheets/dbc01c8b-c00d-46d3-bfa3-fdb2d3832e6d", {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+                "X-Api-Key": "0b#YZUUr5bgxnliuBlrYFtrXVsSVUAVCWPthf4wvYC$Of0hxjT844EedlqSP!bn#"
+            },
+            body: JSON.stringify(data),
+        })
+            .then((r) => r.json())
+            .then((data) => {
+                // The response comes here
+                console.log(data);
+            })
+            .catch((error) => {
+                // Errors are reported there
+                console.log(error);
+            });
+    } else {
+        alert("Please enter a valid email address");
+        return false;
+    }
+}

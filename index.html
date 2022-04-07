@@ -39,7 +39,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="navt-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="download.html">Download</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://docs.jovarkos.org/#/">Documentation</a>
@@ -65,8 +65,9 @@
                             <h1 class="display-5 fw-bolder text-white mb-2">Welcome to JovarkOS,
                             </h1>
                             <p class="lead fw-normal text-white-50 mb-4">A GNU/Linux
-                                distribution based on Arch Linux with the goal of providing stability and speed with
-                                minimal configuration necessary. It is built by mostly teens, for everyone!
+                                distribution based on Arch Linux with the goal striving towards a out of box experience
+                                the Linux desktop has never
+                                seen before.
                             </p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                                 <a class="btn btn-primary btn-lg px-4 me-sm-3" href="https://docs.jovarkos.org/#/">Get
@@ -94,28 +95,32 @@
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                                         class="bi bi-collection"></i></div>
                                 <h2 class="h5">Smart Defaults</h2>
-                                <p class="mb-0">We include the most popular GNOME extensions out of the box - some of
-                                    our developers own the popular extensions themselves!</p>
+                                <p class="mb-0">We provide <i>sane</i> defaults <b>out of the box.</b>
+                                    Our philosophy is to give you as much as you may need, without restricting
+                                    customization after you install.</p>
                             </div>
                             <div class="col mb-5 h-100">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                                         class="bi bi-building"></i></div>
                                 <h2 class="h5">Immersive Desktop Experience</h2>
                                 <p class="mb-0">Speed and agility are the names of the game here. Delve into your work
-                                    with Vivaldi or browse securely using Brave, whichever you choose.</p>
+                                    with Vivaldi or Firefox, whichever you choose, right out of the box!</p>
                             </div>
                             <div class="col mb-5 mb-md-0 h-100">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                                         class="bi bi-toggles2"></i></div>
                                 <h2 class="h5">Latest software</h2>
-                                <p class="mb-0">At its core, Arch Linux fuels JovarkOS's software repository, plus we
+                                <p class="mb-0">At its core, Arch Linux's Core, Extra, and Community fuels JovarkOS's
+                                    software
+                                    repository, plus we
                                     add some of our own via convenience scripts and allow you to use our custom
-                                    repository.</p>
+                                    repository filled with programs from the <abbr
+                                        title="Arch User Repository">AUR</abbr>.</p>
                             </div>
                             <div class="col h-100">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                                         class="bi bi-toggles2"></i></div>
-                                <h2 class="h5">Fast, for everyone!</h2>
+                                <h2 class="h5">Fast, tuned for the desktop</h2>
                                 <p class="mb-0">We make sure to include the latest <span
                                         class="text-monospace">linux-zen</span> kernel
                                     for the ultimate desktop Linux experience.</p>
@@ -159,9 +164,8 @@
                              -->
                             <h2 class="fw-bolder">Documentation</h2>
 
-                            <p class="lead fw-normal text-muted mb-5">We strive to provide extensive documentation,
-                                editable by <i>you</i>, for you. If we don't have the answer, we will refer you to
-                                somewhere
+                            <p class="lead fw-normal text-muted mb-5">We try to provide open documentation.
+                                If we don't have the answer, we will refer you to somewhere
                                 that does.</p>
                         </div>
                     </div>
@@ -178,9 +182,10 @@
                         <!-- placeholder="Email address... -->
                         <div class="ms-xl-4">
                             <div class="input-group mb-2">
-                                <input class="form-control" type="text" placeholder="Coming soon..."
-                                    aria-label="Email address..." aria-describedby="button-newsletter" disabled />
-                                <button class="btn btn-outline-light" id="button-newsletter" type="button" disabled>Sign
+                                <input class="form-control" type="text" placeholder="Your email here..."
+                                    aria-label="Email address..." aria-describedby="button-newsletter" id="email" />
+                                <button class="btn btn-outline-light" id="button-newsletter" type="button"
+                                    onclick="getEmail();">Sign
                                     up</button>
                             </div>
                             <div class="small text-white-50 disabled">We care about privacy, and will never share your
@@ -197,7 +202,7 @@
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                 <div class="col-auto">
-                    <div class="small m-0 text-white">Copyright &copy; JovarkOS Development Team 2021 <span
+                    <div class="small m-0 text-white">Copyright &copy; JovarkOS Development Team 2022 <span
                             class="text-muted">Site Licensed under MIT</span> </div>
                 </div>
                 <div class="col-auto">
