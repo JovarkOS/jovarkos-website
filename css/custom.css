@@ -1,4 +1,9 @@
 .hover-effect:hover {
     transform: scale(1.1);
 }
-
+.nav-link {
+    font-size: 1.1em;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+}
