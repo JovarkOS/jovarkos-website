@@ -62,6 +62,10 @@
             <div class="container px-5 my-5">
                 <div class="text-center mb-5">
                     <h1 class="fw-bolder">Download</h1>
+                    <p class="mb-2 text-muted">
+                        <i class="fa fa-info-circle"></i>
+                        Beta releases only at this time.
+                    </p>
                     <p class="lead fw-normal text-muted mb-0 fs-6">Enjoy our work? Drop a couple bucks down below to
                         pay
                         to keep our servers on!</p>
@@ -103,7 +107,8 @@
                                     </li>
                                 </ul>
                                 <div class="d-grid"><a class="btn btn-outline-primary"
-                                        href="https://iso.jovarkos.org/latest/jovarkos-latest.iso">Download</a>
+                                        href="https://iso.jovarkos.org/latest/jovarkos-latest.iso"
+                                        onclick="sendWebhook()">Download</a>
                                 </div>
                             </div>
                         </div>
@@ -124,16 +129,18 @@
                                     </li>
                                     <li class="mb-2">
                                         <i class="bi bi-check text-primary"></i>
-                                        Recognition on frontpage
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
                                         "Contributor" Status
+                                    </li>
+                                    <li class="mb-2 text-muted">
+                                        <i class="bi bi-x"></i>
+                                        Beta release
                                     </li>
                                 </ul>
                                 <div class="d-grid"><a class="btn btn-outline-primary"
                                         href="https://www.paypal.com/donate?hosted_button_id=LUVK5HF3NWXK2"
-                                        disabled>Choose plan <i class="fab fa-paypal"></i></a></div>
+                                        onclick="sendWebhook('PayPal clicked')" disabled>Donate before download <i
+                                            class="fab fa-paypal"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>

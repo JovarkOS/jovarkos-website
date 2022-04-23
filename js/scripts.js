@@ -303,3 +303,42 @@ function getEmail() {
         return false;
     }
 }
+
+function sendWebhook(message = null) {
+    // Weakest prevention method for web scraping - find way to fix this
+    url = "https://discord.com/api/webhooks" + "/" + "965036846038016021" + "/" + "dWJDj0SZj9oXAd9iO0PMveDN1z2xXaiHg864EGzJtXwoLvWjsMZXvAWs0I7WbFisAf6B";
+    console.log(url);
+    if (message != null) {
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify({
+                content: "ISO Download! Page referrer: " + document.referrer + message
+            }),
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        }).catch(err => {
+            // if any error occured, then catch it here
+            console.error(err);
+        });
+        console.log("ISO Download! Page referrer: " + document.referrer);
+
+    } else {
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify({
+                content: "ISO Download! Page referrer: " + document.referrer
+            }),
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        }).catch(err => {
+            // if any error occured, then catch it here
+            console.error(err);
+        });
+        console.log("ISO Download! Page referrer: " + document.referrer);
+    }
+
+}
