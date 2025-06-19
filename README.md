@@ -8,9 +8,9 @@
 
 *This section is for the website's maintainer(s).*
 
-- Served using [Netlify](https://www.netlify.com/) automatically on every push to the `master` branch.
+- Served using [Netlify](https://www.netlify.com/) automatically on every push to the `main` branch.
 
-- In W3C's HTML5 validator, the website has 0 errors and 0 warnings, and should be validated before every push to the `master` branch.
+- In W3C's HTML5 validator, the website has 0 errors and 0 warnings, and should be validated before every push to the `main` branch.
   - Please refer to the W3C validator VS Code extension for more information. It is highly recommended that you use it.
 
 
